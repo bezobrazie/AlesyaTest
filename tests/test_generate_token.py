@@ -1,7 +1,7 @@
 import httpx
 from config import BASE_URL, user, password
 
-def test_create_user():
+def test_generate_token():
     path = "/GenerateToken/"
     
     body = {

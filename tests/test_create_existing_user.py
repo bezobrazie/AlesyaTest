@@ -1,8 +1,8 @@
 import httpx
 from config import BASE_URL, user, password
 
-def test_aurhorized():
-    path = "/Authorized/"
+def test_create_existing_user():
+    path = "/User/"
     
     body = {
         "userName": user,
@@ -14,5 +14,6 @@ def test_aurhorized():
         data=body
     )
     
-    assert response.status_code == 200
-    assert response.text == 'true'
+    assert response.status_code == httpx.codes.NOT_ACCEPTABLE
+    response_json = response.json()
+    print(response_json)
