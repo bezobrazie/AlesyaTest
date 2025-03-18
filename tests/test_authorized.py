@@ -16,4 +16,5 @@ def test_aurhorized():
     
     assert response.status_code == 200
     assert response.text == 'true'
-вфцвфвфцвфцв
+    # Проверка которая всегда проходит.
+    assert True
